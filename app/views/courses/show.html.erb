@@ -4,7 +4,7 @@
   <h1><%= @course.title %></h1>
   <div class="col-sm-8 col-12">
       <%= @course.description %>
-  </div>
+  </div class='text-center'>
   <%= image_tag @course.image, class: 'img-fluid' %>
   <br />
   <div class="row">
@@ -45,7 +45,7 @@
   </div>
 
    <div class="col-12">
-    <% @course.sections.each do |section| %>
+    <% @course.sections.rank(:row_order).each do |section| %>
     <br /><br />
       <div class="section">
         <h3>
