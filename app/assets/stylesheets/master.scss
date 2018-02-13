@@ -1,5 +1,7 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Lato:100,400,400i,700');
+@import 'font-awesome';
+
 
 .navbar {
   font-family: 'Lato', sans-serif;
@@ -100,11 +102,37 @@
   font-size: 25px;
 }
 
+.lessons li {
+  background: black;
+  color: white;
+  margin: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  padding: 8px;
+  font-size: 15px;
+}
+
+.lessons li b {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.lessons li p {
+  margin: 0;
+}
+
 
 .section {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 20px;
+}
+
+.section-li {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  margin: 20px;
 }
 
 
@@ -116,4 +144,16 @@ body {
   background: image_url('bg.png');
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul .header {
+  font-size: 25px;
+}
+
+ul .header .fa {
+  font-size: 20px;
 }
