@@ -1,7 +1,7 @@
 class Instructor::SectionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_course, only: [:new, :create]
-  before_action :require_authorized_for_current_section, only: [:new,:update]
+  before_action :require_authorized_for_current_course, only: [:create]
+  before_action :require_authorized_for_current_section, only: [:update]
 
   def create
     @section = current_course.sections.create(section_params)
@@ -40,7 +40,7 @@ class Instructor::SectionsController < ApplicationController
     end
   end
 
-  def current_section
+ def current_section
     @section ||= Section.find(params[:id])
   end
 
