@@ -13,10 +13,6 @@ class Instructor::SectionsController < ApplicationController
     render plain: 'updated'
   end
 
-  def new 
-    @section = Section.new
-  end
-
   private
 
   def require_authorized_for_current_course
@@ -40,7 +36,7 @@ class Instructor::SectionsController < ApplicationController
     end
   end
 
- def current_section
+  def current_section
     @section ||= Section.find(params[:id])
   end
 
